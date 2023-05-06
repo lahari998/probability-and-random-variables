@@ -208,6 +208,18 @@
 					 = E\sbrak{e^{-X}e^{-Y}} = E\sbrak{z^{-X}}E\sbrak{z^{-Y}} \\
 					 = M_X(z)M_Y(z) 
 			 \end{align}
+			 \item  We have 
+                        \begin{align}
+                                M_X(z) &= \brak{z^{-1}}\brak{\frac{1}{2}} + \brak{z^{-6}}\brak{\frac{1}{2}} 
+                        \end{align}
+                         \begin{align}
+                                 M_Y(z) &= \frac{z^{-1} + z^{-2} + z^{-3} + z^{-4} + z^{-5} + z^{-6}}{6} 
+                         \end{align}
+                        \begin{align}
+                        M_Z(z) &= \sbrak{\frac{z^{-1} + z^{-6}}{2}}\sbrak{\frac{z^{-1} + z^{-2} + z^{-3} + z^{-4} + z^{-5} + z^{-6}}{6}} \\
+                                &= \frac{1}{12}\sbrak{z^{-2} + z^{-3} + z^{-4} + z^{-5} + z^{-6} + z^{-8} + z^{-9} + z^{-10} + z^{-11} + z^{-12}} + \frac{1}{6}\sbrak{z^{-7}}
+                        \end{align}
+
 		 \item pmf of $X$,$Y$ and $Z$
 			 \begin{align}
 				 p_X\brak{n} &= \frac{1}{2} & \text{ for $n = \{1,6\}$} 
@@ -219,25 +231,12 @@
 				 p_Z\brak{n} = \begin{cases} \frac{1}{12} & \text{if } 2 \leqslant\: n < 7 , \\ \frac{1}{6} & \text{if $n = 7$,} \\ \frac{1}{12} & \text{if } 8 \leqslant\: n < 13 \end{cases}
 			 \end{align}
 			 \includegraphics{1.png}
-		 \item	We have 
-			\begin{align}
-				M_X(z) &= \brak{z^{-1}}\brak{\frac{1}{2}} + \brak{z^{-6}}\brak{\frac{1}{2}} 
-			\end{align}
-			 \begin{align}
-				 M_Y(z) &= \frac{z^{-1} + z^{-2} + z^{-3} + z^{-4} + z^{-5} + z^{-6}}{6} 
-			 \end{align}
-			\begin{align}
-			M_Z(z) &= \sbrak{\frac{z^{-1} + z^{-6}}{2}}\sbrak{\frac{z^{-1} + z^{-2} + z^{-3} + z^{-4} + z^{-5} + z^{-6}}{6}} \\
-				&= \frac{1}{12}\sbrak{z^{-2} + z^{-3} + z^{-4} + z^{-5} + z^{-6} + z^{-8} + z^{-9} + z^{-10} + z^{-11} + z^{-12}} + \frac{1}{6}\sbrak{z^{-7}}
-			\end{align}
-		\item probability of Z=i is coefficient of $z^{-i}$ in $M_Z(z)$.Hence from eqn (10) we get
+		 \item from $p_Z\brak{n}$ we get the required probabilities 
 	   \begin{align}
-		   \pr{Z = 3} &= \brak{\frac{1}{6}}\brak{\frac{1}{2}} \\ 
-		      &= \frac{1}{12}
+		   \pr{Z = 3} &= \frac{1}{12}
 	      \end{align}      
               \begin{align}
-		      \pr{Z = 12} &= \brak{\frac{1}{6}}\brak{\frac{1}{2}} \\
-		      &= \frac{1}{12}
+		      \pr{Z = 12} &= \frac{1}{12}
 	      \end{align}
  \end{enumerate} 
  \end{document}
