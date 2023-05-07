@@ -18,6 +18,7 @@
  \usepackage[breaklinks=true]{hyperref} 
  \usepackage{tkz-euclide} % loads  TikZ and tkz-base 
  \usepackage{listings} 
+ \usepackage{caption}
  % 
  %\usepackage{setspace} 
  %\usepackage{gensymb} 
@@ -230,8 +231,8 @@
 			 \begin{align}
 				 p_Z\brak{n} = \begin{cases} \frac{1}{12} & \text{if } 2 \leqslant\: n < 7 , \\ \frac{1}{6} & \text{if $n = 7$,} \\ \frac{1}{12} & \text{if } 8 \leqslant\: n < 13 \end{cases}
 			 \end{align}
-			 \begin{figure}[h]
-				 \centering
+			 \begin{figure}
+				 \captionsetup{width=\columnwidth}
 				 \includegraphics[width=\columnwidth]{1.png}
 				 \caption{pmf of the sum when coin and die are rolled simultaneously}
 				 \label{fig:pmf}
