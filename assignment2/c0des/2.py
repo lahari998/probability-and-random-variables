@@ -1,18 +1,23 @@
-import random
+import numpy as np
 
 def calculate_probability(num_trials):
-    positive_count = 0
+    count = 0
+    a = np.random.randint(2, size=num_trials)
+    b = np.random.randint(2, size=num_trials)
+    c = np.random.randint(2, size=num_trials)
+    d = np.random.randint(2, size=num_trials)
 
-    for _ in range(num_trials):
-        a = random.randint(0, 1)
-        b = random.randint(0, 1)
-        c = random.randint(0, 1)
-        d = random.randint(0, 1)
+    # Let a 2*2 matrix denoted by x
+    x = np.array([
+    [a,b],
+    [c,d]
+    ]).reshape(num_trials, 2, 2)
+     
+    #deterninant of x is det
+    det = np.linalg.det(x)
+    count = np.count_nonzero(det>0)
 
-        if a * d - b * c > 0:
-            positive_count += 1
-
-    probability = positive_count / num_trials
+    probability = count/ num_trials
     return probability
 
 # Set the number of trials for the simulation
