@@ -218,19 +218,22 @@
 				\caption{cdf of product of numbers appeared on dice}
 				\label{fig:cdf3}
 			\end{figure}
-			$\pr{X=k}$ is pmf of $X$ which is represented by $P_X\brak{k}$.
+			$\pr{X=k}$ is pmf of $X$ which is represented by $p_X\brak{k}$.
                          \begin{align}
-				 P_X\brak{k} =\begin{cases} \frac{k}{6}  & \text{for $k \in \{1,2,3,4,5,6\}$}, \\ 0 & \text{otherwise} \end{cases} 
+				 p_X\brak{k} =\begin{cases} \frac{k}{6}  & \text{for $k \in \{1,2,3,4,5,6\}$}, \\ 0 & \text{otherwise} \end{cases} 
                          \end{align}
                         From $\brak{3}$
 			\begin{align}
 			\pr{Y < \frac{n}{k}} &= F_Y\brak{\frac{n}{k}} - \pr{Y = \frac{n}{k}}
                                 \end{align}
+				\begin{align}
+				\pr{XY < n} &= \sum_{k=1}^{6}\frac{1}{6}\pr{Y < \frac{n}{k}}
+				\end{align}
 		 \item Keeping n = 9
-			 \begin{align}
-			  \pr{XY < 9} &= \sum_{k=1}^{6}\brak{\pr{X=k}\pr{Y < \frac{9}{k}}} \\
-				 \begin{split} &= \pr{X=1}\pr{Y < \frac{9}{1}} +\pr{X=2}\pr{Y < \frac{9}{2}} +\pr{X=3}\pr{Y < \frac{9}{3}} + \\ 
-					 & \pr{X=4}\pr{Y < \frac{9}{4}} +\pr{X=5}\pr{Y < \frac{9}{5}} +\pr{X=6}\pr{Y < \frac{9}{6}} \\
+			\begin{align}
+			  \pr{XY < 9} &= \sum_{k=1}^{6}\brak{\frac{1}{6}\pr{Y < \frac{9}{k}}} \\
+				 \begin{split} &= \frac{1}{6}\pr{Y < \frac{9}{1}} +\frac{1}{6}\pr{Y < \frac{9}{2}} +\frac{1}{6}\pr{Y < \frac{9}{3}} + \\ 
+					 & \frac{1}{6}\pr{Y < \frac{9}{4}} +\frac{1}{6}\pr{Y < \frac{9}{5}} +\frac{1}{6}\pr{Y < \frac{9}{6}} \\
 				 \end{split} \\
 			  &= \brak{\frac{1}{6}}\brak{1 + \frac{4}{6} + \frac{2}{6} + \frac{2}{6} + \frac{1}{6} +\frac{1}{6}} \\
 			  &= \brak{\frac{1}{6}}\brak{\frac{16}{6}} \\
